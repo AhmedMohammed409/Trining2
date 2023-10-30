@@ -30,6 +30,7 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
        name= arguments?.getString("userName")
+        userList= mutableListOf()
         binding.RV.adapter=adapterRv
         Toast.makeText(context,name,Toast.LENGTH_LONG).show()
         binding.btnAdd.setOnClickListener {
